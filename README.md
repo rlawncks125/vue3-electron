@@ -12,8 +12,14 @@ https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/
 vue add electron-builder
 ```
 
-### Lints and fixes files
+### !! 주의 사황 ( XLaunch )
 
+```diff
+!!! serve or 테스트 할떄 XLaunch 켜기
 ```
 
+### window 용 배포 할려면
+
+```
+npm run electron:build -- --win nsis
 ```
