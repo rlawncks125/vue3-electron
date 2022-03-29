@@ -6,6 +6,9 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/about",
@@ -15,12 +18,23 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    meta: {
+      title: "abuot",
+    },
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+// 타이틀 변경
+router.afterEach((to, form) => {
+  const title = to.meta.title || "electron title test";
+  if (typeof title === "string") {
+    document.title = "Electron Test | " + title;
+  }
 });
 
 export default router;

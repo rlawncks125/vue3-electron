@@ -12,9 +12,13 @@ protocol.registerSchemesAsPrivileged([
 
 async function createWindow() {
   // Create the browser window.
+  const path = await import("path");
+
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: path.join(__dirname, "/icons/icon.png"),
+    title: "electron 테스트 입니다.",
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
@@ -31,7 +35,7 @@ async function createWindow() {
   } else {
     createProtocol("app");
     // Load the index.html when not in development
-    win.loadURL("app://./index.html");
+    win.loadURL("app://./index.html/");
   }
 }
 
