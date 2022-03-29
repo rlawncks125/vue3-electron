@@ -1,24 +1,19 @@
 # vue3-electron-builder
 
-## Project setup
+### 사이트
+
 ```
-npm install
+https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### vue Cli 설치
 
-### Compiles and minifies for production
 ```
-npm run build
+vue add electron-builder
 ```
 
 ### Lints and fixes files
-```
-npm run lint
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
